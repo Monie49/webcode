@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+
+  <link rel="shortcut icon" type="image/png" href="selfie.jpg"/>
+  <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="inclass1.css">
+</head>
+<body>
+
+<div class="container">
+  
+
+
+  <div id="nav">
+	<ul class="navtabs">
+    <li><a id="home" onclick="openCont(event,'submenu1')" href="javascript:void(0)" class="tablinks">Home</a></li>
+    <li><a id="about" onclick="openCont(event,'submenu2')" href="javascript:void(0)" class="tablinks">About</a></li>
+    <li><a id="projects" onclick="openCont(event,'submenu3')" href="javascript:void(0)" class="tablinks">Projects</a></li>
+   
+
+  
+  </ul>
+  </div>
+
+	
+<div id="leftpart" >
+
+  <div id="left">
+        <ul id="external">
+          <li><a href="http://www.utdallas.edu/">UTD</a></li>
+          <li><a href="http://hpwishlist.warnerbros.com/">Harry Potter</a></li>
+        </ul>
+  </div>
+
+  <div class="content">
+   
+    <div id="submenu1" class="tabcontent" >  
+      <h3>Homepage</h3>
+      <p>My name is Manlin Xu and now I am pursuing my master degree of computer science at <span class="abbr">UTD</span>.My expected graduation date is May,2017. My specialization for my degree is data science and my curriculum comprised of courses like Database Design, Oriented Object Design and Analysis, Big Data Management and Machine Learning,Design and Analysis-Comp Algorithm,Algorithm and Data Structure. These courses have assisted me to gain profound knowledge in the filed of Computer Science. Email:mxx150430@utdallas.edu, phone-num:9725519908</p>
+    </div>
+
+
+    <div id="submenu2" class="tabcontent">
+        <h3>About</h3>
+      <p>Graduate Student of Computer Science with GPA 3,70. Expected Graduate in May, 2017.
+         Hard worker, quick leaner, self-oriented, work well under the pressure of deadline.
+         Comfortable with both team work and individual work.
+         Great communication and written skills. </br></br>
+         Technical skills：</br>
+         Languages: Java, SQL, HTML, CSS, JavaScript, PHP, Xml</br>
+         Database: MySQL,Oracle<br>
+         Other: Data Structure and Algorithm, Object Oriented Design and Analysis, Spark, MapReduce</p>
+    </div>
+
+    <div id="submenu3" class="tabcontent">
+      <h3>Projects</h3>
+      <p>Exam Registration Website </br></br>
+       Adopted Object Orient Method and Agile Method to develop a website that lets teachers post exams and students register for exams. </br>
+       Facial Expresssion Recognition</br>
+       Developed a system to recognize four basic facial expressions. With Hair-like features algorithm to extract face features and SVM to classify facial expressions, a test accuracy of 83% was obtained on a dataset consisting of 200 images. <br>
+       phone:9725519908
+      </p>
+    </div>
+
+    
+  </div>
+  <div id="right">
+      
+  </div>
+</div>
+
+ <div id="footnote">
+   <p>Manlin Xu</p>
+ </div>
+
+    
+</div>
+
+ <script type="text/javascript">
+   function openCont(evt, cityName) {
+   
+    var i, tabcontent, tablinks;
+
+  
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+ </script>
+ 
+
+</body>
+</html>
+

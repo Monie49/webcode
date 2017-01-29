@@ -1,0 +1,78 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav{
+	width: 100%;
+	height: 60px;
+	background-color: black;
+}
+
+#nav li{
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding:20px;
+	list-style: none;
+	width: 10%;
+	left: 50px;
+}
+
+#nav a{
+	color: lightgrey;
+	text-decoration: none;
+}
+
+#leftpart{
+	float: left;
+}
+
+
+#leftpart .content{
+	float: left;
+	width: 74%;
+	height: 800px;
+	background-color: white;
+}
+
+#leftpart #left{
+	float: left;
+	width: 13%;
+	height: 800px;
+	background-color: lightgrey;
+}
+
+#leftpart #right{
+	float: right;
+	width: 13%;
+	height: 800px;
+	background-color: lightgrey;
+
+}
+
+#footnote{
+	width: 100%;
+	color: lightgrey;
+	background-color: black;
+	text-align: center;
+}
+
+#leftpart #external li{
+    margin:30px;
+    list-style: none;
+}
+
+#leftpart #external li a{
+	text-decoration: none;
+	color: black;
+}
+
+
+#submenu2{
+	display: none;
+}
+
+#submenu3{
+    display: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     <div  id="div1">
+  	   <form id="form">
+      	username:<input id="username" type="text" name="username" placeholder="username" style="margin:10px;"><br/>
+      	password:<input id="password" type="text" name="password" placeholder="password" style="margin:10px;"><br/>
+      	phone-number:<input id="phonenumber" type="text" name="phonenumber" placeholder="format:999-999-9999" style="margin:10px;"><br/>
+        <button type="button" value="submit" onclick="validate()">Submit</button>
+        <p id="text"></p>
+        </form>
+     </div>
+
+     <script type="text/javascript">
+
+       
+     	function validate(){
+              
+                var div1 = document.getElementById("div1");
+                var name = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var num = document.getElementById("phonenumber").value;
+                var reg = /^[0-9a-zA-Z]+$/;
+               var reg1 = /^\d{3}-\d{3}-\d{4}$/;
+               var e1 = false,e2 = false,e3 = false;
+               var para = document.createElement('p');
+               var childs = div1.childNodes;
+               div1.removeChild(childs[childs.length-1]); 
+               
+               if(name == null || !reg.test(name)){
+                	e1 = true;
+                }
+               if (password == null || password.length < 8) {
+                	e2 = true;
+                }
+               if (num == null || !reg1.test(num)) {
+                	e3 = true;
+                }
+
+                
+              
+                if (e1) {
+                	var node1 = document.createTextNode("Username is missing or Username contains some invalid character\n\n\n");
+                    para.appendChild(node1);
+                    var br = document.createElement("br");
+                    para.appendChild(br);
+
+                }
+
+                if (e2) {
+                	var node2 = document.createTextNode("Password is missing or password's length is less than 8\n\n\n");
+                    para.appendChild(node2);
+                    var br = document.createElement("br");
+                    para.appendChild(br);
+
+                }
+
+               if (e3) {
+                	var node3 = document.createTextNode("Phone number is missing or Phonenumber does not have the right format");
+                    para.appendChild(node3);
+                    var br = document.createElement("br");
+                    para.appendChild(br);
+
+                }
+              
+                
+                div1.appendChild(para);
+                  
+             
+                
+     	}
+     </script>
+     
+</body>
+</html>
